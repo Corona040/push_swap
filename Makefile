@@ -7,7 +7,7 @@ CFLAGS = -Wall -Wextra -Werror
 LIBS = libft.a
 
 SRCS = push_swap.c		\
-	   handle_args.c	\
+	   init_args.c		\
 	   init_stack.c
 
 HDRS = push_swap.h
