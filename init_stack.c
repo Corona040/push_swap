@@ -6,12 +6,11 @@
 /*   By: ecorona- <ecorona-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 15:43:08 by ecorona-          #+#    #+#             */
-/*   Updated: 2024/01/29 17:39:21 by ecorona-         ###   ########.fr       */
+/*   Updated: 2024/01/29 18:57:17 by ecorona-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdlib.h>
 
 void	free_stack(int **stack)
 {
