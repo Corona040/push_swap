@@ -8,7 +8,8 @@ LIBS = libft.a
 
 SRCS = push_swap.c		\
 	   init_args.c		\
-	   init_stack.c
+	   init_stack.c		\
+	   sort.c
 
 HDRS = push_swap.h
 

@@ -6,7 +6,7 @@
 /*   By: ecorona- <ecorona-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 10:58:28 by ecorona-          #+#    #+#             */
-/*   Updated: 2024/01/29 17:40:14 by ecorona-         ###   ########.fr       */
+/*   Updated: 2024/01/29 19:16:24 by ecorona-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@ int	main(int argc, char **argv)
 	init_args(&arg, 0, -1);
 	stack = init_stack(&arg);
 	free_argv(&arg);
+	sort_stack(stack, arg.c);
 	free_stack(stack);
 }
