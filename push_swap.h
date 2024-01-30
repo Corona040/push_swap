@@ -6,7 +6,7 @@
 /*   By: ecorona- <ecorona-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 17:14:34 by ecorona-          #+#    #+#             */
-/*   Updated: 2024/01/29 20:00:33 by ecorona-         ###   ########.fr       */
+/*   Updated: 2024/01/30 16:59:23 by ecorona-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,22 @@ void	ft_index_algo(int **stack, int *sorted_a, int *result,  int size);
 void	ft_index(t_arg *arg, int **stack, int size);
 int		**init_stack(t_arg *arg);
 /* ************************************************************************** */
-// sort.c
-int		count_zeros(int *array, int size);
-void	append(int **stack, int **ops, int op);
+// naive_sort.c
 int		shortest_path(int **stack, int size, int cursor, int target);
-int		*push_next(int **stack, int size, int *cursor, int target);
-void	sort_stack(int **stack, int size);
+void	push_next(int **stack, int size, int *cursor, int target);
+void	naive_sort(int **stack, int size);
+/* ************************************************************************** */
+// utils.c
+void	push(int **stack, int size, int pushpush);
+void	swap(int **stack, int size, int swapswap, int print);
+void	rotate(int **stack, int size, int rotrot, int print);
+void	revrot(int **stack, int size, int revrev, int print);
+int		top(int *array, int size, int depth);
+int		count_zeros(int *array, int size);
+int		is_sorted(int *array, int size);
+/* ************************************************************************** */
+// median_sort.c
+float	median(int *array, int size);
+void	median_sort(int **stack, int size);
 
 #endif

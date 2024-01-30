@@ -9,7 +9,9 @@ LIBS = libft.a
 SRCS = push_swap.c		\
 	   init_args.c		\
 	   init_stack.c		\
-	   sort.c
+	   utils.c			\
+	   naive_sort.c		\
+	   median_sort.c
 
 HDRS = push_swap.h
 
