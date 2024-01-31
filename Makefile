@@ -10,7 +10,9 @@ SRCS = push_swap.c		\
 	   init_args.c		\
 	   init_stack.c		\
 	   utils.c			\
-	   median_sort.c
+	   utils_ops.c		\
+	   utils_turk.c		\
+	   easy_sort.c
 
 HDRS = push_swap.h
 

@@ -6,7 +6,7 @@
 /*   By: ecorona- <ecorona-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 15:43:08 by ecorona-          #+#    #+#             */
-/*   Updated: 2024/01/31 00:12:07 by ecorona-         ###   ########.fr       */
+/*   Updated: 2024/01/31 18:31:54 by ecorona-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	ft_bubble_sort(int *dest, int *src, int size)
 	}
 }
 
-void	ft_index_algo(int **stack, int *sorted_a, int *result,  int size)
+void	ft_index_algo(int **stack, int *sorted_a, int *result, int size)
 {
 	int	i;
 	int	j;
