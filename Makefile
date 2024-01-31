@@ -4,7 +4,7 @@ CC = cc
 
 CFLAGS = -Wall -Wextra -Werror -g
 
-LIBS = libft.a
+LIBFT = libft/libft.a
 
 SRCS = push_swap.c		\
 	   init_args.c		\
@@ -14,17 +14,19 @@ SRCS = push_swap.c		\
 	   utils_turk.c		\
 	   easy_sort.c
 
-HDRS = push_swap.h
-
 all: $(NAME)
 
-$(NAME): $(SRCS) $(HDRS)
-	$(CC) $(CFLAGS) $(SRCS) $(LIBS) -o $(NAME)
+$(NAME): $(SRCS) $(LIBFT)
+	$(CC) $(CFLAGS) $(SRCS) $(LIBFT) -o $(NAME)
+
+$(LIBFT):
+	@make -C libft printf
 
 clean:
+	@make -C libft clean
 
-fclean:
-	rm $(NAME)
+fclean: clean
+	rm -rf $(LIBFT) $(NAME)
 
 re: fclean all
 

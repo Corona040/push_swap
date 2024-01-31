@@ -6,7 +6,7 @@
 /*   By: ecorona- <ecorona-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 17:14:34 by ecorona-          #+#    #+#             */
-/*   Updated: 2024/01/31 19:54:53 by ecorona-         ###   ########.fr       */
+/*   Updated: 2024/01/31 20:06:35 by ecorona-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 # define PUSH_SWAP_H
 
 # include <stdlib.h>
-# include "libft.h"
-# include "ft_printf.h"
+# include "libft/libft.h"
+# include "libft/ft_printf.h"
 
 typedef struct s_arg
 {
