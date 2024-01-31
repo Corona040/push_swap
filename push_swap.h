@@ -6,7 +6,7 @@
 /*   By: ecorona- <ecorona-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 17:14:34 by ecorona-          #+#    #+#             */
-/*   Updated: 2024/01/30 16:59:23 by ecorona-         ###   ########.fr       */
+/*   Updated: 2024/01/31 00:16:05 by ecorona-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,7 @@ typedef struct s_arg
 	char	**ptr_v;
 }	t_arg;
 
-typedef struct s_intlist
-{
-	int	*list;
-	int	size;
-}	t_intlist;
-
+void	print(int **stack);
 /* ************************************************************************** */
 //	init_args.c
 void	leave(t_arg *arg, int **stack, int error, int error_status);
@@ -47,21 +42,22 @@ void	ft_index(t_arg *arg, int **stack, int size);
 int		**init_stack(t_arg *arg);
 /* ************************************************************************** */
 // naive_sort.c
-int		shortest_path(int **stack, int size, int cursor, int target);
-void	push_next(int **stack, int size, int *cursor, int target);
-void	naive_sort(int **stack, int size);
+int		shortest_path(int **stack, int target);
+void	push_next(int **stack, int target);
+void	naive_sort(int **stack);
 /* ************************************************************************** */
 // utils.c
-void	push(int **stack, int size, int pushpush);
-void	swap(int **stack, int size, int swapswap, int print);
-void	rotate(int **stack, int size, int rotrot, int print);
-void	revrot(int **stack, int size, int revrev, int print);
-int		top(int *array, int size, int depth);
-int		count_zeros(int *array, int size);
-int		is_sorted(int *array, int size);
+int		*gettop(int *array);
+int		*getbottom(int *array);
+int		getsize(int *array);
+int		is_sorted(int *array);
+void	push(int **stack, int pushpush);
+void	swap(int **stack, int swapswap, int print);
+void	rotate(int **stack, int rotrot, int print);
+void	revrot(int **stack, int revrev, int print);
 /* ************************************************************************** */
 // median_sort.c
-float	median(int *array, int size);
-void	median_sort(int **stack, int size);
+float	median(int *array);
+void	median_sort(int **stack);
 
 #endif

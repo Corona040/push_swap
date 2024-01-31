@@ -6,7 +6,7 @@
 /*   By: ecorona- <ecorona-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 15:43:08 by ecorona-          #+#    #+#             */
-/*   Updated: 2024/01/29 18:57:17 by ecorona-         ###   ########.fr       */
+/*   Updated: 2024/01/31 00:12:07 by ecorona-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,8 @@ void	ft_index(t_arg *arg, int **stack, int size)
 	int	*sorted_a;
 	int	*result;
 
+	stack[0][size] = -1;
+	stack[1][size] = -1;
 	sorted_a = ft_calloc(size, sizeof(int)); 
 	if (!sorted_a)
 		leave(arg, stack, 1, EXIT_FAILURE);
@@ -101,11 +103,11 @@ int	**init_stack(t_arg *arg)
 	stack = ft_calloc(2, sizeof(int *));
 	if (!stack)
 		leave(arg, stack, 1, EXIT_FAILURE);
-	a = ft_calloc(arg->c, sizeof(int));
+	a = ft_calloc(arg->c + 1, sizeof(int));
 	if (!a)
 		leave(arg, stack, 1, EXIT_FAILURE);
 	stack[0] = a;
-	b = ft_calloc(arg->c, sizeof(int));
+	b = ft_calloc(arg->c + 1, sizeof(int));
 	if (!b)
 		leave(arg, stack, 1, EXIT_FAILURE);
 	stack[1] = b;
