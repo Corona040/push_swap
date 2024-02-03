@@ -6,7 +6,7 @@
 /*   By: ecorona- <ecorona-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 10:58:28 by ecorona-          #+#    #+#             */
-/*   Updated: 2024/01/31 19:57:00 by ecorona-         ###   ########.fr       */
+/*   Updated: 2024/02/03 13:19:34 by ecorona-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,19 @@ int	main(int argc, char **argv)
 		arg = (t_arg){.c = argc, .v = argv, .free = 0, .ptr_v = 0};
 		init_args(&arg, 0, -1);
 		stack = init_stack(&arg);
-		if (arg.c <= 3)
-			sort_three(stack, 0);
-		else if (arg.c <= 6)
-			sort_six(stack);
-		else if (is_sorted(stack[0]) != 1)
+		if (is_sorted(stack[0]) != 1)
 		{
-			push(stack, 1);
-			push(stack, 1);
-			turk_sort(stack);
-			retrieve(stack);
+			if (arg.c <= 3)
+				sort_three(stack, 0);
+			else if (arg.c <= 6)
+				sort_six(stack);
+			else if (is_sorted(stack[0]) != 1)
+			{
+				push(stack, 1);
+				push(stack, 1);
+				turk_sort(stack);
+				retrieve(stack);
+			}
 		}
 		free_argv(&arg);
 		free_stack(stack);
