@@ -6,12 +6,11 @@
 /*   By: ecorona- <ecorona-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 15:43:43 by ecorona-          #+#    #+#             */
-/*   Updated: 2024/01/31 19:03:45 by ecorona-         ###   ########.fr       */
+/*   Updated: 2024/02/03 15:55:23 by ecorona-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdlib.h>
 
 int	shortest_path(int *array, int target)
 {
