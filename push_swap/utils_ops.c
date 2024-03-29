@@ -6,7 +6,7 @@
 /*   By: ecorona- <ecorona-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 18:25:16 by ecorona-          #+#    #+#             */
-/*   Updated: 2024/01/31 18:34:30 by ecorona-         ###   ########.fr       */
+/*   Updated: 2024/03/29 16:30:34 by ecorona-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	swap(int **stack, int swapswap, int print)
 		swap(stack, 0, 0);
 		swap(stack, 1, 0);
 	}
-	else 
+	else
 	{
 		top = gettop(stack[swapswap]);
 		if (top[0] > 0 && top[1] > 0)

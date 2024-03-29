@@ -6,7 +6,7 @@
 /*   By: ecorona- <ecorona-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 19:05:47 by ecorona-          #+#    #+#             */
-/*   Updated: 2024/01/31 19:57:59 by ecorona-         ###   ########.fr       */
+/*   Updated: 2024/03/29 16:31:01 by ecorona-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	sort_three(int	**stack, int sortsort)
 		&& *top != getminmax(stack[sortsort], 1) \
 		&& *top != getminmax(stack[sortsort], 0))
 	{
-		if (top[1] == getminmax(stack[sortsort], 0)) 
+		if (top[1] == getminmax(stack[sortsort], 0))
 			swap(stack, sortsort, 1);
 		else
 			revrot(stack, sortsort, 1);
@@ -50,7 +50,7 @@ void	descsort_three(int	**stack, int sortsort)
 		&& *top != getminmax(stack[sortsort], 1) \
 		&& *top != getminmax(stack[sortsort], 0))
 	{
-		if (top[1] == getminmax(stack[sortsort], 1)) 
+		if (top[1] == getminmax(stack[sortsort], 1))
 			swap(stack, sortsort, 1);
 		else
 			revrot(stack, sortsort, 1);

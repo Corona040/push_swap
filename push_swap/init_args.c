@@ -6,7 +6,7 @@
 /*   By: ecorona- <ecorona-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 17:02:49 by ecorona-          #+#    #+#             */
-/*   Updated: 2024/03/27 19:42:20 by ecorona-         ###   ########.fr       */
+/*   Updated: 2024/03/29 16:29:00 by ecorona-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,8 @@ void	split_argv(t_arg *arg)
 
 void	check_args(t_arg *arg, int zeros, int i, int j)
 {
-	if (arg->c == 0)
-		leave(arg, NULL, 0, EXIT_SUCCESS);
+	if (arg->c == 0 || !**arg->v)
+		leave(arg, NULL, arg->c > 0, EXIT_SUCCESS);
 	while (i < arg->c)
 	{
 		j = i;
@@ -76,7 +76,7 @@ void	check_args(t_arg *arg, int zeros, int i, int j)
 			if ((!ft_strncmp(arg->v[i], arg->v[j], ft_strlen(arg->v[i])) \
 				&& !ft_strncmp(arg->v[i], arg->v[j], ft_strlen(arg->v[j]))) \
 				|| (zeros && arg->v[i][arg->v[i][0] == '-'] == '0' \
-				&& arg->v[j][arg->v[j][0] == '-'] == '0') || !arg->v[j][0])
+				&& arg->v[j][arg->v[j][0] == '-'] == '0') || !*arg->v[j])
 				leave(arg, NULL, 1, EXIT_SUCCESS);
 		j = ((arg->v[i][0] == '-') && (arg->v[i][1] != 0)) - 1;
 		while (arg->v[i][++j] != 0)
