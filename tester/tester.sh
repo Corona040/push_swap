@@ -26,7 +26,7 @@ do
 	done < "$test"
 	echo ""
 done
-for test in tests/100_random.txt tests/500_random.txt tests/5_random.txt
+for test in tests/100_random.txt tests/500_random.txt tests/5_random.txt tests/Ordered.txt
 do
 	echo $test
 	max=0
