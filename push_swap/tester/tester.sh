@@ -1,14 +1,15 @@
 !/bin/bash
 
-make -C ../push_swap/
+cd `dirname $0`
+make -C ../
 echo ""
 for test in tests/Error.txt
 do
 	echo $test
 	while read -r line
 	do
-		result=`./../push_swap/push_swap $line`
-		if [ "$result" != "Error" ]; then
+		RESULT=`../push_swap $line`
+		if [ "$RESULT" != "Error" ]; then
 			echo "Fail test: $line"
 		fi
 	done < "$test"
@@ -19,8 +20,8 @@ do
 	echo $test
 	while read -r line
 	do
-		result=`./../push_swap/push_swap $line`
-		if [ "$result" == "Error" ]; then
+		RESULT=`../push_swap $line`
+		if [ "$RESULT" == "Error" ]; then
 			echo "Fail test: $line"
 		fi
 	done < "$test"
@@ -33,10 +34,10 @@ do
 	min=100000
 	while read -r line
 	do
-		result=`./../push_swap/push_swap $line | ./../push_swap/checker_linux $line`
-		moves=`./../push_swap/push_swap $line | wc -l`
-		if [ "$result" != "OK" ]; then
-			echo -ne "$result\nOn test: $line"
+		RESULT=`../push_swap $line | ./checker_linux $line`
+		moves=`../push_swap $line | wc -l`
+		if [ "$RESULT" != "OK" ]; then
+			echo -ne "$RESULT\nOn test: $line"
 		fi
 		if [[ $moves -gt $max ]]; then
 			max=$moves
