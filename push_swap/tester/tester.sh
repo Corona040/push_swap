@@ -8,7 +8,7 @@ do
 	echo $test
 	while read -r line
 	do
-		RESULT=`../push_swap $line`
+		RESULT=`../push_swap $line 2>&1`
 		if [ "$RESULT" != "Error" ]; then
 			echo "Fail test: $line"
 		fi
@@ -20,7 +20,7 @@ do
 	echo $test
 	while read -r line
 	do
-		RESULT=`../push_swap $line`
+		RESULT=`../push_swap $line 2>&1`
 		if [ "$RESULT" == "Error" ]; then
 			echo "Fail test: $line"
 		fi
